@@ -15,6 +15,7 @@ Source0:	http://search.cpan.org/CPAN/authors/id/P/PA/PARDUS/%{module}/%{module}-
 BuildRequires:	perl-devel
 %endif
 BuildRequires:	perl-File-BaseDir
+BuildRequires:	perl(Module::Build)
 BuildRoot: 	%{_tmppath}/%{name}-%{version}
 BuildArch:	noarch
 
