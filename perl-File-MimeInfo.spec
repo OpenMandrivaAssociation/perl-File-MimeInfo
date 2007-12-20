@@ -16,6 +16,7 @@ BuildRequires:	perl-devel
 %endif
 BuildRequires:	perl-File-BaseDir
 BuildRequires:	perl(Module::Build)
+BuildRoot: 	%{_tmppath}/%{name}-%{version}
 BuildArch:	noarch
 
 %description
