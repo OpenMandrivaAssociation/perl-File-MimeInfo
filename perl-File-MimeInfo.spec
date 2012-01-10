@@ -1,15 +1,15 @@
 %define upstream_name 	 File-MimeInfo
-%define upstream_version 0.15
+%define upstream_version 0.16
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 5
+Release:    1
 
 Summary:	Determine file type
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://search.cpan.org/CPAN/authors/id/P/PA/PARDUS/%{upstream_name}/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	http://search.cpan.org/CPAN/authors/id/P/PA/PARDUS/%{upstream_name}/%{upstream_name}-%{upstream_version}.tar.gz
 
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
@@ -17,7 +17,6 @@ BuildRequires:	perl-devel
 BuildRequires:	perl-File-BaseDir
 BuildRequires:	perl(Module::Build)
 BuildArch:	noarch
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module can be used to determine the mime type of a file; it's a 
@@ -37,14 +36,9 @@ work-alike.
 %{__make} test
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc README Changes
 %_bindir/*
 %{perl_vendorlib}/File
