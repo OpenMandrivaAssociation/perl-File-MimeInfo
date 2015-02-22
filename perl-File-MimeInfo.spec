@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    5
+Release:    6
 
 Summary:    Determine file type
 
@@ -23,6 +23,8 @@ BuildRequires: perl-devel
 BuildArch:  noarch
 Requires:   perl(File::BaseDir) >= 0.30.0
 
+Patch0:		perl-File-MimeInfo-0.26-fix-typo.patch
+
 %description
 This module can be used to determine the mime type of a file; it's a 
 replacement for File::MMagic trying to implement the freedesktop 
@@ -32,6 +34,7 @@ work-alike.
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
+%apply_patches
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
