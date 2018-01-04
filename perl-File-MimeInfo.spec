@@ -1,9 +1,9 @@
-%define upstream_name 	 File-MimeInfo
-%define upstream_version 0.26
+%define upstream_name File-MimeInfo
+%define upstream_version 0.28
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    9
+Release:    1
 
 Summary:    Determine file type
 
@@ -22,8 +22,6 @@ BuildRequires: perl(Pod::Usage)
 BuildRequires: perl-devel
 BuildArch:  noarch
 Requires:   perl(File::BaseDir) >= 0.30.0
-
-Patch0:		perl-File-MimeInfo-0.26-fix-typo.patch
 
 %description
 This module can be used to determine the mime type of a file; it's a 
@@ -52,4 +50,3 @@ make test
 %{_bindir}/mimetype
 %{perl_vendorlib}/File
 %{_mandir}/*/*
-
