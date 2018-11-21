@@ -20,6 +20,7 @@ BuildRequires: perl(File::BaseDir) >= 0.30.0
 BuildRequires: perl(File::DesktopEntry) >= 0.40.0
 BuildRequires: perl(Pod::Usage)
 BuildRequires: perl(File::BaseDir)
+BuildRequires: perl(Test::More)
 BuildRequires: perl-devel
 BuildArch:  noarch
 Requires:   perl(File::BaseDir) >= 0.30.0
