@@ -48,7 +48,7 @@ make test
 %make_install
 
 %files
-%doc Changes META.json META.yml MYMETA.yml
+%doc Changes META.json META.yml
 %{_bindir}/mimeopen
 %{_bindir}/mimetype
 %{perl_vendorlib}/File
