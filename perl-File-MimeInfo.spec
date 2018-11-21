@@ -22,6 +22,7 @@ BuildRequires: perl(Pod::Usage)
 BuildRequires: perl(File::BaseDir)
 BuildRequires: perl(Test::More)
 BuildRequires: perl-devel
+BuildRequires: pkgconfig(shared-mime-info)
 BuildArch:  noarch
 Requires:   perl(File::BaseDir) >= 0.30.0
 
