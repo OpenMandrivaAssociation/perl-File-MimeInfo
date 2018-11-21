@@ -1,9 +1,9 @@
 %define upstream_name File-MimeInfo
-%define upstream_version 0.28
+%define upstream_version 0.29
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    2
+Release:    1
 
 Summary:    Determine file type
 
@@ -33,17 +33,17 @@ work-alike.
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
-%apply_patches
+%autopatch -p1
 
 %build
-perl Makefile.PL INSTALLDIRS=vendor
-%make
+perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}"
+%make_build
 
 %check
 make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc Changes META.json META.yml MYMETA.yml
