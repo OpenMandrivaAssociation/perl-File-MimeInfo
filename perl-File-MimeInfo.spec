@@ -12,6 +12,7 @@ Group:      Development/Perl
 Url:        https://search.cpan.org/dist/%{upstream_name}/
 Source0:    http://search.cpan.org/CPAN/authors/id/P/PA/PARDUS/%{upstream_name}/%{upstream_name}-%{upstream_version}.tar.gz
 
+BuildRequires:	make
 BuildRequires: perl(Carp)
 BuildRequires: perl(Exporter)
 BuildRequires: perl(ExtUtils::MakeMaker) >= 6.300.0
