@@ -1,16 +1,16 @@
 %define upstream_name File-MimeInfo
-%define upstream_version 0.29
+%define upstream_version 0.37
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    3
+Version:    %{upstream_version}
+Release:    1
 
 Summary:    Determine file type
 
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}/
-Source0:    http://search.cpan.org/CPAN/authors/id/P/PA/PARDUS/%{upstream_name}/%{upstream_name}-%{upstream_version}.tar.gz
+Url:        https://codeberg.org/michielb/File-MimeInfo
+Source0:    https://cpan.metacpan.org/authors/id/M/MI/MICHIELB/File-MimeInfo-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl(Carp)
