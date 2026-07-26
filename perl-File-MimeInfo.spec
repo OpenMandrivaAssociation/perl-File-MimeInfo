@@ -1,16 +1,14 @@
 %define upstream_name File-MimeInfo
-%define upstream_version 0.37
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:    1
+Version:    0.37
+Release:    2
 
 Summary:    Determine file type
 
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        https://codeberg.org/michielb/File-MimeInfo
-Source0:    https://cpan.metacpan.org/authors/id/M/MI/MICHIELB/File-MimeInfo-%{upstream_version}.tar.gz
+Source0:    https://cpan.metacpan.org/authors/id/M/MI/MICHIELB/File-MimeInfo-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl(Carp)
@@ -35,7 +33,7 @@ comes with a script called 'mimetype' that can be used as a file(1)
 work-alike.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 %autopatch -p1
 
 %build
