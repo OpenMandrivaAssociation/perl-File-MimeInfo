@@ -1,7 +1,7 @@
 %define upstream_name File-MimeInfo
 Name:       perl-%{upstream_name}
 Version:    0.37
-Release:    2
+Release:    3
 
 Summary:    Determine file type
 
@@ -22,6 +22,7 @@ BuildRequires: perl(File::BaseDir)
 BuildRequires: perl(Test::More)
 BuildRequires: perl-devel
 BuildRequires: pkgconfig(shared-mime-info)
+BuildRequires:	perl(Encode::Locale)
 BuildArch:  noarch
 Requires:   perl(File::BaseDir) >= 0.30.0
 
